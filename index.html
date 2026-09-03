@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#060607">
+  <title>Portfolio</title>
+  <meta name="description" content="Portfolio of Coldshader — Creative Developer, Graphics Programmer, and Interface Artisan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="intro.css">
+</head>
+<body>
+
+  <!-- WebGL Background Stage -->
+  <div id="stage" aria-hidden="true">
+    <canvas id="gl"></canvas>
+  </div>
+
+  <!-- Cinematic Framing -->
+  <div class="bar top" aria-hidden="true"></div>
+  <div class="bar bottom" aria-hidden="true"></div>
+  <div id="grain" aria-hidden="true"></div>
+
+  <!-- Main Interactive Viewport -->
+  <main id="app">
+    
+    <!-- Hero / Intro Screen -->
+    <section id="intro" class="screen" aria-label="Introduction">
+      <div id="content">
+        <div class="status-badge">
+          <span class="pulse-dot"></span>
+          <span class="status-text">Technically Proficient</span>
+        </div>
+
+        <h1 class="name" data-text="COLDSHADER">COLDSHADER</h1>
+        
+        <div class="real-name-wrapper" id="realNameWrapper">
+          <span class="real-name-bracket">//</span>
+          <span class="real-name" id="realName" data-value="Daniel">Daniel</span>
+          <span class="real-name-bracket">//</span>
+        </div>
+
+        <p class="role">
+          <span class="role-segment">Sound Designer</span>
+          <span class="role-sep">&bull;</span>
+          <span class="role-segment">Graphics Programmer</span>
+          <span class="role-sep">&bull;</span>
+          <span class="role-segment">Video Editor</span>
+        </p>
+
+        <button class="enter" id="enterBtn" aria-label="Enter portfolio">
+          <span class="btn-shine"></span>
+          <span class="btn-label">ENTER EXPERIENCE</span>
+          <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 3.5L10.5 8L6 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- Profile & Portfolio Screen -->
+    <section id="profile" class="screen" aria-label="Profile and Works" aria-hidden="true">
+      <div class="wrap">
+        
+        <header class="profile-header">
+          <div class="header-top">
+            <div class="meta-tag">SYS // PORTFOLIO_V2.0</div>
+            <div class="availability">
+              <span class="pulse-dot"></span>
+              <span>Technically Proficient</span>
+            </div>
+          </div>
+          <h1 class="profile-title">Coldshader</h1>
+          <div class="profile-realname">// Daniel //</div>
+          <p class="subtitle">Sound Designer, Video Editor &amp; Networking Specialist that does projects that push the boundaries of what's possible in digital media.</p>
+        </header>
+
+        <section class="bio-section">
+          <h2 class="section-label">01 // ABOUT</h2>
+          <div class="bio-content">
+            <p>
+              The experiences I create are a reflection of my passion for technology, art, and sound. I strive to craft immersive digital experiences that captivate audiences and push the boundaries of what's possible in the realm of interactive media.
+            </p>
+          </div>
+          
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span class="stat-num">2</span>
+              <span class="stat-desc">Years in Code &amp; Visual Tech</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">GLSL</span>
+              <span class="stat-desc">Beginner at Shader Programming</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">Novice</span>
+              <span class="stat-desc">Still Learning</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="projects-section">
+          <div class="section-header">
+            <h2 class="section-label">02 // SELECTED WORK</h2>
+            <span class="section-note">[ 2024 &mdash; 2026 ARCHIVE ]</span>
+          </div>
+
+          <div class="projects">
+            
+            <article class="project" data-glow>
+              <div class="project-inner">
+                <div class="project-meta">
+                  <span class="project-num">PROJ_01</span>
+                  <span class="project-category">GRAPHICS / SOUND</span>
+                </div>
+                <h3 class="project-title">WavPlayer</h3>
+                <p class="project-desc">A GPU-accelerated .wav audio player with real-time effects and visualization.</p>
+                <div class="tags">
+                  <span class="tag">DirectX 12</span>
+                  <span class="tag">HLSL</span>
+                  <span class="tag">Fluid Dynamics</span>
+                  <span class="tag">FFT</span>
+                  <span class="tag">WAV</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="skills-section">
+          <h2 class="section-label">03 // CORE CAPABILITIES</h2>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <span class="skill-category">Network &amp; Compute</span>
+              <p>Proficient in network programming and parallel computing techniques</p>
+            </div>
+            <div class="skill-item">
+              <span class="skill-category">Video Editor</span>
+              <p>Proficient at editing and post-production for video content</p>
+            </div>
+            <div class="skill-item">
+              <span class="skill-category">Backend Development</span>
+              <p>C++ and Java Developer</p>
+            </div>
+          </div>
+        </section>
+
+        <footer class="profile-footer">
+          <button class="back" id="backBtn" aria-label="Return to introduction">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 12.5L5.5 8L10 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>RETURN TO HERO STAGE</span>
+          </button>
+          <div class="footer-meta">
+            <span>&copy; <span id="copyrightYear"></span> COLDSHADER &bull; ALL RIGHTS RESERVED</span>
+          </div>
+        </footer>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 3D Split Transition Stage -->
+  <div class="split-viewport" aria-hidden="true">
+    <div class="split left" id="splitLeft"><canvas></canvas></div>
+    <div class="split right" id="splitRight"><canvas></canvas></div>
+    <div id="seam"></div>
+  </div>
+
+  <!-- Hidden Background Audio Element -->
+  <audio id="bgAudio" src="deiwos.ogg" loop preload="auto" aria-hidden="true"></audio>
+
+  <!-- Audio Control Widget (Top-Left) -->
+  <div class="audio-control paused" id="audioControl" role="region" aria-label="Audio controls">
+    <button class="audio-toggle" id="audioToggle" aria-label="Toggle background audio">
+      <span class="sound-wave" aria-hidden="true">
+        <span class="wave-bar wb-1"></span>
+        <span class="wave-bar wb-2"></span>
+        <span class="wave-bar wb-3"></span>
+      </span>
+      <span class="audio-label" id="audioStatusText">AUDIO: OFF</span>
+    </button>
+    <div class="volume-slider-box">
+      <input class="volume-slider" id="volumeRange" type="range" min="0" max="1" step="0.01" value="0.30" aria-label="Volume">
+      <span id="volumePct">30%</span>
+    </div>
+    <span class="section-note"> | Deiwos by Maittre</span>
+  </div>
+  <script src="intro.js"></script>
+</body>
+</html>
